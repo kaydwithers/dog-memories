@@ -1,0 +1,7 @@
+{
+  "name": "Rick and Morty",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "vue"
+}
