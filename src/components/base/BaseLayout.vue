@@ -1,0 +1,61 @@
+<template>
+  <ion-page>
+    <ion-header>
+      <ion-toolbar>
+        <ion-buttons slot="start">
+          <ion-back-button :default-href="pageDefaultBackLink" />
+        </ion-buttons>
+
+        <ion-title>
+          {{ pageTitle }}
+        </ion-title>
+
+        <ion-buttons slot="end">
+          <slot name="actions-end" />
+        </ion-buttons>
+      </ion-toolbar>
+    </ion-header>
+
+    <ion-content :fullscreen="true">
+      <slot />
+    </ion-content>
+  </ion-page>
+</template>
+
+<script>
+import { defineComponent } from "vue";
+import {
+  IonButtons,
+  IonBackButton,
+  IonContent,
+  IonHeader,
+  IonPage,
+  IonTitle,
+  IonToolbar,
+} from "@ionic/vue";
+
+export default defineComponent({
+  name: "BaseLayout",
+  components: {
+    IonBackButton,
+    IonButtons,
+    IonContent,
+    IonHeader,
+    IonPage,
+    IonTitle,
+    IonToolbar,
+  },
+  props: {
+    pageTitle: {
+      default: "",
+      required: false,
+      type: String,
+    },
+    pageDefaultBackLink: {
+      default: null,
+      required: false,
+      type: String,
+    },
+  },
+});
+</script>

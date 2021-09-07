@@ -1,10 +1,10 @@
-import { CapacitorConfig } from '@capacitor/cli';
+import { CapacitorConfig } from "@capacitor/cli";
 
 const config: CapacitorConfig = {
-  appId: 'io.ionic.starter',
-  appName: 'Rick and Morty',
-  webDir: 'dist',
-  bundledWebRuntime: false
+  appId: "com.kayd.memories",
+  appName: "Dog Memories",
+  webDir: "dist",
+  bundledWebRuntime: false,
 };
 
 export default config;
